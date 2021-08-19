@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin id="cordova-plugin-os-audiovideoplayer" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>OSAudioVideoPlayer</name>
+    <js-module name="OSAudioVideoPlayer" src="www/OSAudioVideoPlayer.js">
+        <clobbers target="OSAudioVideoPlayer" />
+    </js-module>
+
+    <platform name="ios">
+        <dependency url="https://github.com/agoncalvesos/cordova-plugin-add-swift-support" id="cordova-plugin-add-swift-support"/>
+        <config-file parent="/*" target="config.xml">
+            <feature name="OSAudioVideoPlayer">
+                <param name="ios-package" value="OSAudioVideoPlayer"/>
+                <param name="onload" value="true" />
+            </feature>
+            <preference name="deployment-target" value="10" />
+            <preference name="UseSwiftLanguageVersion" value="5" />
+        </config-file>
+        <source-file src="src/ios/OSAudioVideoPlayer-Bridging-Header.h" />
+        <source-file src="src/ios/OSAudioVideoPlayer.swift" />
+        <source-file src="src/ios/OSPlayerViewController.swift" />
+    </platform>
+</plugin>

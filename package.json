@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-audiovideoplayer",
+  "version": "0.1.0",
+  "description": "Audio & Video Player",
+  "cordova": {
+    "id": "cordova-plugin-os-audiovideoplayer",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "André Grillo",
+  "license": "MIT"
+}
