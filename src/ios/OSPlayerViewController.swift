@@ -47,7 +47,7 @@ class OSPlayerViewController: UIViewController {
     }
 
     private func setCloseButton() {
-        lazy var closeButton: UIButton = {
+        var closeButton: UIButton = {
             let btn = UIButton()
             if #available(iOS 13.0, *) {
                 btn.setImage(UIImage(systemName: "x.circle"), for: .normal)
